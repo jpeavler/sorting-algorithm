@@ -1,4 +1,5 @@
-function sum(a, b) {
-    return a + b;
+  const quicksort = (list) => {
+    return list;
   }
-  module.exports = sum;
+
+module.exports = quicksort;
