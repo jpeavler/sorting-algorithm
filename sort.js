@@ -1,4 +1,26 @@
+  const partition = (list, low, high) => {
+    let pivot = list[high];
+    let i = (low-1);
+    for (let j = low; j < high; j++) {
+      if(list[j] < pivot) {
+        i++;
+        let swapper = list[i];
+        list[i] = list[j];
+        list[j] = swapper;
+      }
+    }
+    let swapper2 = list[i+1];
+    list[i+1] = list[high];
+    list[high] = swapper2;
+    return i+1;
+  }
+  
   const quicksort = (list, low, high) => {
+    if(low < high) {
+      let partitionIndex = partition(list, low, high);
+      quicksort(list, low, partitionIndex-1);
+      quicksort(list, partitionIndex+1, high);
+    }
     return list;
   }
 
