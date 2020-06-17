@@ -1,4 +1,4 @@
-  const quicksort = (list) => {
+  const quicksort = (list, low, high) => {
     return list;
   }
 
