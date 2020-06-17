@@ -21,3 +21,10 @@ test('Sorts a long list', () => {
 test('Sorts list with negative numbers', () => {
     expect(sort([-4,17,-5,5])).toEqual([-5,-4,5,17]);
 });
+
+test('Randomly generated list sorted by array function', () => {
+    let randArray = Array.from(Array(100)).map(x=>Math.ceil(Math.random() * 1000));
+    let sortedArray = [...randArray];
+    sortedArray.sort((a, b) => a - b);
+    expect(sort(randArray)).toEqual(sortedArray);
+})
