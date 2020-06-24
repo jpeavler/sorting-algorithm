@@ -1,3 +1,4 @@
+  //A helper fuction for quicksort
   const partition = (list, low, high) => {
     let pivot = list[high];
     let i = (low-1);
@@ -14,7 +15,7 @@
     list[high] = swapper2;
     return i+1;
   }
-  
+  //A recursive function that takes in an array or subarray along with the the first and last indexes of that array/subarray
   const quicksort = (list, low, high) => {
     if(low < high) {
       let partitionIndex = partition(list, low, high);
