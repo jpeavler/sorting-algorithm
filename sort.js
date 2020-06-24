@@ -5,9 +5,11 @@
     for (let j = low; j < high; j++) {
       if(list[j] < pivot) {
         i++;
-        let swapper = list[i];
-        list[i] = list[j];
-        list[j] = swapper;
+        if(i != j) {          //prevents swapping an index with itself
+          let swapper = list[i];
+          list[i] = list[j];
+          list[j] = swapper;
+        }
       }
     }
     let swapper2 = list[i+1];
