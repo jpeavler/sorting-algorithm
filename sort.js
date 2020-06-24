@@ -12,9 +12,11 @@
         }
       }
     }
-    let swapper2 = list[i+1];
-    list[i+1] = list[high];
-    list[high] = swapper2;
+    if(i+1 != high) {         //again prevents swapping an index with itself
+      let swapper2 = list[i+1];
+      list[i+1] = list[high];
+      list[high] = swapper2;
+    }
     return i+1;
   }
   //A recursive function that takes in an array or subarray along with the the first and last indexes of that array/subarray
